@@ -1,0 +1,6 @@
+app:
+  beer:
+    form:
+      name: Name
+      alcoholContent: ABV
+      editButton: Update beer

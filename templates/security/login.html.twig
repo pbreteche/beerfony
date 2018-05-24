@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if last_error %}
+        <div>{{ last_error.message }} </div>
+    {% endif %}
+    <form action="{{ path('app_security_logincheck') }}" method="post">
+        <input type="text" name="_username">
+        <input type="password" name="_password">
+        <button>Se connecter</button>
+    </form>
+{% endblock %}

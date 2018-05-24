@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    {%  if is_granted('ROLE_USER') %}
+
+    {% endif %}
+
+    {{ dump(pub.beer) }}
+
+    {% for beer in pub.beers %}
+        {{ dump(beer) }}
+    {% endfor %}
+
+    {{ dump(pub) }}
+
+
+    {{ dump(pub.wines) }}
+    {{ dump(pub.wines | length) }}
+    {% for wine in pub.wines %}
+        {{ dump(wine) }}
+    {% endfor %}
+{% endblock %}
